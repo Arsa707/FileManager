@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.filemanager.filemanager.FileManagerController">
+
+
+    <MenuBar>
+        <Menu text="Файл">
+            <MenuItem onAction="#menuItemFileExitAction" text="Выйти из программы" />
+        </Menu>
+    </MenuBar>
+
+    <HBox>
+        <ComboBox>
+            <!-- тут будет выпадающий список с иерархией файлов -->
+        </ComboBox>
+        <TextField editable="false" HBox.hgrow="ALWAYS" />
+        <Button onAction="#onClickButtonUpAction" text="⬅" />
+    </HBox>
+
+    <TableView fx:id="filesTable" cache="true" fixedCellSize="20.0" VBox.vgrow="ALWAYS" />
+
+    <HBox spacing="5">
+        <Button maxWidth="Infinity" onAction="#onClickButtonOpenAction" text="Открыть" HBox.hgrow="ALWAYS" />
+        <Button maxWidth="Infinity" onAction="#onClickButtonMoveAction" text="Переместить" HBox.hgrow="ALWAYS" />
+        <Button maxWidth="Infinity" onAction="#onClickButtonCopyAction" text="Копировать" HBox.hgrow="ALWAYS" />
+        <Button maxWidth="Infinity" onAction="#onClickButtonPastAction" text="Вставить" HBox.hgrow="ALWAYS" />
+        <Button maxWidth="Infinity" onAction="#onClickButtonCutAction" text="Вырезать" HBox.hgrow="ALWAYS" />
+        <Button maxWidth="Infinity" onAction="#onClickButtonDeleteAction" text="Удалить" HBox.hgrow="ALWAYS" />
+        <Button maxWidth="Infinity" onAction="#onClickButtonRenameAction" text="Переименовать" HBox.hgrow="ALWAYS" />
+        <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+        </padding>
+    </HBox>
+</VBox>
