@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.filemanager.filemanager.PanelController">
+
+    <HBox>
+        <ComboBox onAction="#selectDiskAction" fx:id="disksBox">
+        </ComboBox>
+        <TextField fx:id="pathField" editable="false" HBox.hgrow="ALWAYS" />
+        <Button onAction="#onClickButtonUpAction" text="⬅" />
+    </HBox>
+
+    <TableView fx:id="filesTable" cache="true" fixedCellSize="20.0" VBox.vgrow="ALWAYS" />
+
+    <properties>
+        <ctrl> <fx:reference source ="controller"/> </ctrl>
+    </properties>
+</VBox>
